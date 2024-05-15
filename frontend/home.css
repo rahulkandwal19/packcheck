@@ -1,0 +1,148 @@
+/* ---------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------- */
+:root{
+    --colour1 : #51CE05;
+    --colour2 : #00DD8E;
+    --colour3 : #FFFFFF;
+}
+/* ---------------------------------------------------------------------------- */
+body {
+    margin: 0;
+    padding: 0;
+}
+/* ---------------------------------------------------------------------------- */
+
+/* Header */
+.headerBase {
+    background: var(--colour1);
+    height: 22vh;
+    width: 100vw;
+    border-bottom-left-radius: 100%;
+    border-bottom-right-radius: 100%;
+    position: fixed;
+    margin: 0;
+    padding: 0;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+.headerLogo{
+    padding-top: 2px;
+    width: 180px;
+    height: 95px;
+}
+.menuButton{
+    height: 60px;
+    width: 60px;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    background-image: url("icons/menubutton.png");
+    background-size: 60px 60px ;
+    background-color: transparent;
+    border-width: 0;
+}
+.searchBar{
+    position: absolute;
+    width: 50%;
+    height: 35px;
+    border-radius: 20px;
+    background-image: url("icons/search.png");
+    background-repeat: no-repeat;
+    background-size: 28px 28px;
+    padding-left: 55px;
+    background-position-x: 15px;
+    background-position-y: 4px ;
+    left: 20%;
+}
+/* ---------------------------------------------------------------------------- */
+
+/* Footer */
+.footerBase {
+    background: var(--colour2);
+    height: 25vh;
+    width: 100vw;
+    border-top-left-radius: 100%;
+    border-top-right-radius: 100%;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    bottom: 0;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.footerBottom{
+    position: absolute;
+    bottom: 0;
+    background-color: var(--colour1);
+    width: 100vw;
+    height: 25%;
+    border-top: black solid 10px;
+}
+.searchButton{
+        width: 100px;
+        height: 100px;
+        outline-style:initial;
+        border-width: 12px;
+        border-radius: 100px;
+        cursor: pointer;
+        position: absolute;
+        left : 40%;
+        top : 12%;
+        background-image: url("icons/camera.png");
+        background-repeat: no-repeat;
+        background-size: 60px 60px;
+        background-position-x: 50%;
+        background-position-y: 50%;
+}
+/* ---------------------------------------------------------------------------- */
+
+/* Overlay Menu */
+
+.menuLogo{
+    padding-top: 2px;
+    width: 50vw;
+    height: 25vw;
+}
+.overlay {
+    height: 100vh;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    background-color: var(--colour2);
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+.overlay-content {
+    position: relative;
+    top: 15%;
+    width: 100%;
+    text-align: center;
+    margin-top: 15px;
+}
+.overlay a {
+    padding: 2px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+.overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+}
+.overlay .close-btn {
+    position: absolute;
+    top: 5px;
+    right: 15px;
+    font-size: 60px;
+}
+@media screen and (max-height: 450px) {
+    .overlay a {font-size: 20px}
+    .overlay .close-btn {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
+}
+/* ---------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------- */

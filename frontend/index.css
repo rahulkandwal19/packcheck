@@ -1,0 +1,24 @@
+body{
+    width: 100vw;
+    height: 100vh;
+    background-color: #00DD8E;
+}
+
+.logo{
+    width: 70vw;
+    height:35vw;
+    position: fixed;
+    margin-top: 40%;
+    margin-right: 10%;
+    margin-left: 10%;
+}
+
+.button{
+    position: relative;
+    display: block;
+    height:50px;
+    width:200px;
+    margin: auto ;
+    top: 50%
+
+}
