@@ -15,7 +15,7 @@ body {
 /* Header */
 .headerBase {
     background: var(--colour1);
-    height: 22vh;
+    height: 25vh;
     width: 100vw;
     border-bottom-left-radius: 100%;
     border-bottom-right-radius: 100%;
@@ -28,6 +28,7 @@ body {
     padding-top: 2px;
     width: 180px;
     height: 95px;
+    padding-bottom: 2px;
 }
 .menuButton{
     height: 60px;
@@ -39,6 +40,7 @@ body {
     background-size: 60px 60px ;
     background-color: transparent;
     border-width: 0;
+    padding-bottom: 2px;
 }
 .searchBar{
     position: absolute;
