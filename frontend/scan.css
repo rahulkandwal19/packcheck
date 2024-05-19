@@ -32,8 +32,9 @@ header{
 #reader{
     z-index: 0;
     position: fixed;
-    top: 70%;
+    top: 60%;
     width: 100vw;
+    padding-bottom: 10%;
 }
 #html5-qrcode-anchor-scan-type-change{
     font-size: larger;
