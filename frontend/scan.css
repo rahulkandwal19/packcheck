@@ -3,6 +3,9 @@
 body {
     margin: 0;
     padding: 0;
+    background-color: orange;
+    height: 100vw;
+    width: 100vh;
 }
 /* ---------------------------------------------------------------------------- */
 header{
@@ -27,11 +30,13 @@ header{
 }
 /* ---------------------------------------------------------------------------- */
 #reader{
-    width: 100vw;
-    height: 50vh;
-    position: relative;
-    top: 25vh;
     z-index: 0;
+    position: fixed;
+    top: 70%;
+    width: 100vw;
+}
+#html5-qrcode-anchor-scan-type-change{
+    font-size: larger;
 }
 
 #html5-qrcode-button-camera-start{
