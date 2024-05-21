@@ -1,0 +1,41 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    position: fixed;
+    top:0;
+    width: 100vw;
+    height: 5vh;
+    background-color: #51CE05;
+    z-index: 10;
+}
+
+#resultSection{
+    position: absolute;
+    top: 8vw;
+}
+
+.result{
+    width: 95vw;
+    height: 20vh;
+    background-color: orange;
+    margin-bottom: 15px;
+
+}
+.buttonimg{
+    position: inherit;
+    height: 97%;
+    aspect-ratio: initials;
+    left: 0;
+}
+footer{
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    height: 5vh;
+    background-color: #51CE05;
+    text-align: center;
+    z-index: 10;
+}

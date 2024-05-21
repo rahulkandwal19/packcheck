@@ -31,10 +31,9 @@ header{
 /* ---------------------------------------------------------------------------- */
 #reader{
     z-index: 0;
-    position: fixed;
-    top: 60%;
+    position: inherit;
     width: 100vw;
-    padding-bottom: 10%;
+    top:20vh;
 }
 #html5-qrcode-anchor-scan-type-change{
     font-size: larger;
