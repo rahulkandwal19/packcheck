@@ -18,7 +18,7 @@ function parseURLParams(url) {
 }
 
 let key = parseURLParams(currentUrl)["query"][0];
-    fetch('http://127.0.0.1:5000/search_result?key=' + key)
+    fetch('rahulkandwal19.pythonanywhere.com/search_result?key=' + key)
         .then((response) => {
             return response.json();
         })
@@ -35,9 +35,9 @@ let key = parseURLParams(currentUrl)["query"][0];
                 let result_url = document.createElement("a")
                 result_url.href="result.html?result="+value
                 let result_button = document.createElement('button');
-                result_button.textContent = value;
+
                 result_button.classList.add("result");
-                result_button.innerHTML = '<img src = "images/productdata/productimg/'+value+'.png" class="buttonimg" alt="result of search">'
+                result_button.innerHTML = '<img src = "images/productdata/productimg/'+value+'.png" class="buttonimg" alt="result of search">'+value;
                 result_url.appendChild(result_button);
                 div.appendChild(result_url);
 
