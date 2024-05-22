@@ -18,7 +18,7 @@ function parseURLParams(url) {
 }
 
 let key = parseURLParams(currentUrl)["query"][0];
-    fetch('rahulkandwal19.pythonanywhere.com/search_result?key=' + key)
+    fetch('https://rahulkandwal19.pythonanywhere.com/search_result?key=' + key)
         .then((response) => {
             return response.json();
         })
