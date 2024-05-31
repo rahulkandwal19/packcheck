@@ -9,7 +9,7 @@ password = "graphic123"
 app.config['MYSQL_HOST'] = "rahulkandwal19.mysql.pythonanywhere-services.com"
 app.config['MYSQL_USER'] = "rahulkandwal19"
 app.config['MYSQL_PASSWORD'] = password
-app.config['MYSQL_DB'] = "packcheck_data"
+app.config['MYSQL_DB'] = "rahulkandwal19$packcheck_data"
 mydb = MySQL(app)
 
 def searchproduct(productname):
