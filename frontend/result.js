@@ -26,7 +26,7 @@ lableText.appendChild(key);
 let img =document.getElementById('productIMG');
 img.src= "images/productdata/productimg/"+key+".png";
 
-fetch('https://rahulkandwal19.pythonanywhere.com/chemicalfound?key=' + key)
+fetch('https://rahulkandwal19.pythonanywhere.com/chemical_found?key=' + key)
     .then((response) => {
         return response.json();
     })

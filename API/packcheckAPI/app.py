@@ -5,15 +5,16 @@ from flask_mysqldb import MySQL
 app = Flask(__name__)
 CORS(app)
 
+password = "graphic123"
 app.config['MYSQL_HOST'] = "rahulkandwal19.mysql.pythonanywhere-services.com"
 app.config['MYSQL_USER'] = "rahulkandwal19"
-app.config['MYSQL_PASSWORD'] = "graphic123"
+app.config['MYSQL_PASSWORD'] = password
 app.config['MYSQL_DB'] = "packcheck_data"
 mydb = MySQL(app)
 
 def searchproduct(productname):
     mycursor = mydb.connection.cursor()
-    mycursor.execute("SELECT product_name FROM product_info where UPPER(product_name) LIKE UPPER('%"+productname+"%)'")
+    mycursor.execute("SELECT product_name FROM product_info where UPPER(product_name) LIKE UPPER('%"+productname+"%')")
     itemresult=mycursor.fetchall()
     itemlist = []
     for i in itemresult:
@@ -25,7 +26,7 @@ def chemicalfound(productname):
     mycursor = mydb.connection.cursor()
     mycursor.execute("SELECT chemicals FROM product_info where product_name ="+"UPPER("+productname+")")
     itemresult=mycursor.fetchall()
-    itemlist= itemresult.split("+")
+    itemlist= itemresult[0].split("+")
     return str(itemlist)
 
 @app.route('/search_result')
