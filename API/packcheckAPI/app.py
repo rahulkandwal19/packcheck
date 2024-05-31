@@ -16,11 +16,11 @@ def searchproduct(productname):
     mycursor = mydb.connection.cursor()
     mycursor.execute("SELECT product_name FROM product_info where UPPER(product_name) LIKE UPPER('%"+productname+"%')")
     itemresult=mycursor.fetchall()
-    itemlist = []
+    itemlist = ""
     for i in itemresult:
-        itemlist.append(itemresult[0])
-        itemlist.append("+")
-    return str(itemlist)
+        itemlist= itemlist + i[0]
+        itemlist= itemlist + "+"
+    return itemlist
 
 def chemicalfound(productname):
     mycursor = mydb.connection.cursor()
