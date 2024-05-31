@@ -24,9 +24,9 @@ def searchproduct(productname):
 
 def chemicalfound(productname):
     mycursor = mydb.connection.cursor()
-    mycursor.execute("SELECT chemicals FROM product_info where product_name ="+"UPPER("+productname+")")
+    mycursor.execute("SELECT chemicals FROM product_info where UPPER(product_name) = UPPER('"+productname+"')")
     itemresult=mycursor.fetchall()
-    itemlist= itemresult[0].split("+")
+    itemlist= itemresult[0][0]
     return str(itemlist)
 
 @app.route('/search_result')
