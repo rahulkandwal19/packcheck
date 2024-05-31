@@ -17,15 +17,10 @@ function parseURLParams(url) {
     return parms;
 }
 
-let key = parseURLParams(currentUrl)["query"][0];
+let key = parseURLParams(currentUrl)["result"][0];
 
-
-let lableText = document.getElementById('productName');
-lableText.appendChild(key);
-
-let img =document.getElementById('productIMG');
-img.src= "images/productdata/productimg/"+key+".png";
-
+document.getElementById("productIMG").src = "images/productdata/productimg/"+key+".png";
+document.getElementById("productName").innerHTML = key;
 fetch('https://rahulkandwal19.pythonanywhere.com/chemical_found?key=' + key)
     .then((response) => {
         return response.json();
