@@ -21,12 +21,23 @@ def searchproduct(productname):
         itemlist.append("+")
     return str(itemlist)
 
+def chemicalfound(productname):
+    mycursor = mydb.connection.cursor()
+    mycursor.execute("SELECT chemicals FROM product_info where product_name ="+"UPPER("+productname+")")
+    itemresult=mycursor.fetchall()
+    itemlist= itemresult.split("+")
+    return str(itemlist)
+
 @app.route('/search_result')
 def search_result():
     key = request.args.get('key')
     result = searchproduct(key)
     return jsonify({"result": result})
 
-
+@app.route('/chemical_found')
+def chemical_found():
+    key = request.args.get('key')
+    result = chemicalfound(key)
+    return jsonify({"result": result})
 if __name__ == '__main__':
     app.run()
